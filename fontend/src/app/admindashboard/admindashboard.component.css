@@ -1,0 +1,16 @@
+.center{
+   text-align: center;
+}
+th{
+   padding: 15px;
+}
+td{
+   padding: 10px;
+}
+.thead-light{
+   color: black;
+   background-color: rgb(255, 255, 255) !important;
+}
+table{
+   margin-top: 5%;
+}

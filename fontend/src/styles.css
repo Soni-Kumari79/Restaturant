@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files*/
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.550),rgba(0, 0, 0, 0.550)) ,url('https://previews.123rf.com/images/shpargala/shpargala1810/shpargala181000146/109908604-a-halloween-meal-a-dish-at-a-restaurant-for-halloween-celebrations-black-background-brick-wall-and-w.jpg');
+    background-size: cover;
+    background-color: black;
+ }

@@ -1,0 +1,34 @@
+<div id="form">
+    <div class="container">
+       <div class="center">
+          <h3>ADD NEW USER</h3>
+       </div>
+ <div class="forms">
+ <div class="form-group">
+  <label for="exampleInputPassword1">FIRST NAME</label>
+  <input type="text" class="form-control" [(ngModel)]='firstname' name="firstname">
+ </div><br>
+ <div class="form-group">
+  <label for="exampleInputPassword1">LAST NAME</label>
+  <input type="text" class="form-control" [(ngModel)]='lastname' name="lastname">
+ </div><br>
+ <div class="form-group">
+  <label for="exampleInputPassword1">MAIL ID</label>
+  <input type="email" class="form-control" [(ngModel)]='email' name="email">
+ </div><br>
+ <div class="form-group">
+  <label for="exampleInputPassword1">CONTACT</label>
+  <input type="text" class="form-control" [(ngModel)]='phone' name="phone">
+ </div><br>
+ <div class="form-group">
+  <label for="exampleInputPassword1">PASSWORD</label>
+  <input type="text" class="form-control" [(ngModel)]='password' name="password">
+ </div><br>
+ <div class="form-group">
+  <label for="exampleInputPassword1">CONFIRM PASSWORD</label>
+  <input type="text" class="form-control" [(ngModel)]='confirm_password' name="confirm_password">
+ </div><br>
+ <div class="center">
+    <button id="submit" (click)='adduser()' class="btn btn-success">Add User</button>
+ </div>
+ </div>

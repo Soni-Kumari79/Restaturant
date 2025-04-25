@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><h2>Surabi</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav float-right">
+          <li class="nav-item">
+            <a routerLink='/guest_dashboard' class="dark nav-link">FOOD ITEMS</a> 
+          </li>
+          <li class="nav-item" *ngIf='!userservice.isNotLogIn()'>
+            <a routerLink='/login' class="dark nav-link">USER LOGIN</a>
+         </li>
+         <li class="nav-item" *ngIf='!userservice.isNotLogIn()'>
+            <a routerLink='/register' class="dark nav-link">USER REGISTER</a>
+         </li>
+         <li class="nav-item" *ngIf='!userservice.isNotLogIn()'>
+           <a routerLink='/adminlogin' class="dark nav-link">ADMIN LOGIN</a>
+        </li>
+        <li class="nav-item" *ngIf='!userservice.isNotLogIn()'>
+           <a routerLink='/adminregister' class="dark nav-link">ADMIN REGISTER</a>
+        </li>
+          
+          <li class="nav-item" *ngIf='!userservice.isLogIn()'>
+             <a (click)="logout()" style="cursor: pointer;" class="dark nav-link">Logout</a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>

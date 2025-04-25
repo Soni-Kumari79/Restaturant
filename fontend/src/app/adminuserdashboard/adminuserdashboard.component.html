@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="center">
+      
+       <a routerLink="/adminuserdashboard"><button type="button" class="btn btn-warning" style="margin-left: 20%;">User Data</button></a>
+       <a routerLink='/todaybill'><button type="button" class="btn btn-success" style="margin-left: 20%;">Today's Bill</button></a>
+       <a routerLink='/monthbill'><button type="button" class="btn btn-success" style="margin-left: 20%;">Month Bill</button></a>
+    </div>
+    <br>
+    <div class="center">
+       <a routerLink="/adduser"><button type="button" class="btn btn-danger">Add User</button></a>
+    </div>
+    <div class="users">
+       <p style="color: red;">Welcome To Food Feast {{this.email}}</p>
+    </div>
+ 
+    <table class="table table-dark table-striped">
+       <thead class="thead-light">
+          <tr>
+             <th scope="col">ID</th>
+             <th scope="col">FIRST NAME</th>
+             <th scope="col">LAST NAME</th>
+             <th scope="col">MAIL ID</th>
+             <th scope="col">CONTACT</th>
+             <th scope="col">PASSWORD</th>
+             <th scope="col">CONFIRM PASSWORD</th>
+             <th scope="col" colspan="3">Action</th>
+            
+          </tr>
+       </thead>
+       <tbody>
+       <tr *ngFor='let user of user'>
+             <td>{{user.id}}</td>
+             <td>{{user.firstname}}</td>
+             <td>{{user.lastname}}</td>
+             <td>{{user.email}}</td>
+             <td>{{user.phone}}</td>
+             <td>{{user.password}}</td>
+             <td>{{user.confirm_password}}</td>
+             <td><a (click)="edit(user)"><i class="fa fa-edit" style="font-size:25px;color:green;"></i></a></td>
+                 <td><a (click)="delete(user)"><i class="fa fa-trash" style="font-size:25px;color:red;"></i></a></td>
+                 <td>
+                  <a routerLink='/adminbookdashboard'><button type="button" class="btn btn-warning">Book Data</button></a>
+                 </td>
+       </tr>
+      </tbody>
+ </table>
+ </div>

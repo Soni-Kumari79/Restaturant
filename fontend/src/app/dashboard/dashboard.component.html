@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="users">
+       <p style="color: orange;">Welcome To Food Feast {{this.email}}</p>
+    </div>
+    
+    <div class="row">
+       <div class="col-8">
+          <div class="container">
+             <div *ngFor='let item of item; let i=index' class="inline-setter">
+                <div id="book">
+                   <span class="card-controller card" style="width: 18rem;"> 
+                      <img class="card-img-top" src='../../assets/{{item.imageId}}.JPG'
+                      onerror="this.src='https:/motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie.jpg' "
+                      height="200" alt="Card image cap">
+                      <div class="card-body">
+                         <h4 class="card_title text-truncate"
+                            style="max-width: calc(70 * 1vw)">{{item.name}}</h4>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                         <li class="list-group-item">Price : {{item.price}}</li>
+                         <li class="list-group-item">Qty : {{item.quality}}</li>
+                         <!-- <li class="list-group-item">Total : {{book.sum}}</li> -->
+                         <li style="text-align: center;margin: 2% 0;"><button class="btn btn-danger" (click)="addlist(item)">Add to List</button></li>
+                      </ul>
+                   </span>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="col" style="background-color: rgb(255, 253, 253);">
+             <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Food Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+             <tr *ngFor='let food of foodlists; let i=index;'>
+                       <th scope="row">{{i}}</th>
+                       <td>{{food.name}}</td>
+                       <td>{{food.price}}</td>
+                       <td>{{food.quality}}</td>
+                       <td>{{food.price * food.quality}}</td>
+             </tr>
+          </tbody>
+          </table>
+          <div *ngIf="total!=0">
+             <hr style="border: 5px dotted rgb(161, 0, 161);">
+             <div style="text-align: right;color: red;font-weight: bold;font-size:xx-large;margin-right: 30px;">{{total}}</div>
+             <div align="center"><button class="btn btn-danger" style="margin-top: 5%;" (click)="order()">Order</button></div>
+          </div>
+       </div>
+    </div>
+ </div>

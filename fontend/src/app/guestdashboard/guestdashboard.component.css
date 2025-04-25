@@ -1,0 +1,9 @@
+.users{
+	padding:2%;
+	font-size:larger;
+}
+
+.inline-setter{
+	margin: 1%;
+	display: inline-block;
+}

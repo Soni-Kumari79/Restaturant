@@ -1,0 +1,27 @@
+<div id="form">
+    <div class="container">
+       <div class="center">
+          <h3>Add New Dish</h3>
+       </div>
+ <div class="forms">
+ <div class="form-group">
+  <label for="exampleInputPassword1">Food Name</label>
+  <input type="text" class="form-control" [(ngModel)]='name' name="name">
+ </div><br>
+ <div class="form-group">
+  <label for="exampleInputPassword1">Price</label>
+  <input type="text" class="form-control" [(ngModel)]='price' name="price">
+ </div><br>
+ <div class="form-group">
+  <label for="exampleInputPassword1">Qty</label>
+  <input type="email" class="form-control" [(ngModel)]='quality' name="quality">
+ </div><br>
+
+ <div class="form-group">
+  <label for="exampleInputPassword1">Image ID</label>
+  <input type="text" class="form-control" [(ngModel)]='imageId' name="imageId">
+ </div><br>
+ <div class="center">
+    <button id="submit" (click)='additem()' class="btn btn-danger">Add Dish</button>
+ </div>
+ </div>
